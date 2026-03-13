@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#38BDF8"/>
+      <stop offset="50%"  stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#bg)"/>
+
+  <!-- Border -->
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.5" fill="none"
+    stroke="url(#grad)" stroke-width="1" opacity="0.5"/>
+
+  <!-- X letter — centered, bold, gradient -->
+  <text
+    x="16" y="22"
+    text-anchor="middle"
+    font-family="'Segoe UI', 'Inter', 'SF Pro Display', sans-serif"
+    font-size="20"
+    font-weight="900"
+    fill="url(#grad)"
+    filter="url(#glow)"
+  >X</text>
+
+  <!-- Small dot accent bottom-right -->
+  <circle cx="26" cy="26" r="2.5" fill="#F472B6" opacity="0.85"/>
+</svg>
